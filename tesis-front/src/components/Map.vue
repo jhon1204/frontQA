@@ -18,7 +18,7 @@
                   <br/>
                   <br/>
                   
-                  Punto de fin: {{marker1.lat.toString()+', '+marker1.lng.toString()}}
+                  Punto de fin: {{marker2.lat.toString()+', '+marker2.lng.toString()}}
                   <br/>
                   <br/>
                   <b-button variant="success">Buscar Ruta</b-button>

@@ -30,15 +30,15 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .bar1{
     text-align: left;
-    margin: 5px;
+    margin: 10px;
 }
 .bar{
     background-color: #1B4965;
     color:#fff;
-    height: 50px;
+    height: 60px;
 }
 .topbar{
     text-align: right;
@@ -46,6 +46,6 @@ export default {
 
 }
 .button1{
-    margin: 5px;
+    margin: 0px;
 }
 </style>
