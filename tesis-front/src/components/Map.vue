@@ -3,8 +3,8 @@
   <div >
     <b-container>
       
-      <b-row id="mapContainer">
-        <b-col>
+      <b-row >
+        <b-col md="4">
           <b-form>    
             <br/>          
                 <b-form-input list="my-list-id" placeholder="Seleccionar contaminante" v-model="poll"></b-form-input>
@@ -27,23 +27,42 @@
           <br/>
           <h5> Instrucciones </h5>
         </b-col>
-        <b-col>
+        <b-col id="mapContainer" >
           <LMap  :zoom="zoom" :center="center" :bounds="bounds" :max-bounds="maxBounds" >
             <LTileLayer :url="url"></LTileLayer>
             <LPolyline :lat-lngs="square.latlngs" :color="square.color"></LPolyline>
             <LMarker :lat-lng="marker1" :draggable="true" @dragend="updateMarker1"><LTooltip>Punto de Inicio</LTooltip></LMarker>
             <LMarker :lat-lng="marker2" :draggable="true" @dragend="updateMarker2"><LTooltip>Punto de Fin</LTooltip></LMarker>
+            <LControlLayers
+              position="topright"
+              :collapsed="false"
+              :sort-layers="true"
+            />
+            
+             <LCircleMarker
+                v-for="marker in sensors"
+                :key="marker.id"
+                :radius="circle.radius"
+                :color="circle.color"
+                :lat-lng="marker.coords"
+              >
+                <LPopup :content="marker.name" />
+             </LCircleMarker>
+            
           </LMap>
+          
         </b-col>
+        
       </b-row>
     </b-container>
   </div>
 </template>
 
 <script>
-import { LMap, LTileLayer, LMarker,LTooltip, LPolyline} from "vue2-leaflet";
+import { LMap, LTileLayer, LMarker,LTooltip, LPolyline,LControlLayers,LPopup,LCircleMarker} from "vue2-leaflet";
 import { latLngBounds, latLng } from "leaflet";
 import { OpenStreetMapProvider } from 'leaflet-geosearch';
+import sensorsData from "../../sensors.json"
 export default {
   name: "Map",
   components: {
@@ -51,11 +70,29 @@ export default {
     LTileLayer,
     LMarker,
     LTooltip,
-    LPolyline
+    LPolyline,
+    LCircleMarker,
+    LControlLayers,
+    LPopup
 
   },
   data() {
     return {
+      iconSize: [32, 37],
+      iconAnchor: [16, 37],
+      circle: {
+        radius: 5,
+        color: 'red'
+      },      
+      layers: [
+        {
+          id:0,
+          name: 'Sensores',
+          active: false,
+          features: [sensorsData.Sensors]
+        }
+      ],
+      sensors:sensorsData.Sensors,
       poll:'',
       square: {
         latlngs: [[-12.0605,-77.0566],[-12.0350,-77.0566],[-12.0350,-77.0026],[-12.0605,-77.0026],[-12.0605,-77.0566]],
@@ -97,8 +134,9 @@ export default {
     showMarker(index){
       console.log(this.markers[index])
 
-    }
+    },
   },
+
   watch: {
     marker1: function(val){
       this.marker1=val
