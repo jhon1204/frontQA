@@ -35,10 +35,11 @@
             <LMarker :lat-lng="marker2" :draggable="true" @dragend="updateMarker2"><LTooltip>Punto de Fin</LTooltip></LMarker>
             <LControlLayers
               position="topright"
-              :collapsed="false"
+              :collapsed="true"
               :sort-layers="true"
             />
             
+            <LLayerGroup name="Sensores" layer-type="overlay">
              <LCircleMarker
                 v-for="marker in sensors"
                 :key="marker.id"
@@ -48,7 +49,30 @@
               >
                 <LPopup :content="marker.name" />
              </LCircleMarker>
-            
+            </LLayerGroup>
+            <LLayerGroup name="Mapa Contaminación" layer-type="overlay">
+              <LPolygon v-for="cell in mapPoll"
+                :key="cell.id"
+                :lat-lngs="cell.geometry.coordinates[0]"
+                :opacity="0.1"
+                color="green"
+              >
+
+              </LPolygon>
+                
+            </LLayerGroup>
+            <LLayerGroup name="Medios" layer-type="overlay">
+             <LCircleMarker
+                v-for="marker in cells"
+                :key="marker.id"
+                :radius="circle.radius"
+                color="green"
+                :lat-lng="marker.coords"
+              >
+                
+             </LCircleMarker>
+            </LLayerGroup>
+
           </LMap>
           
         </b-col>
@@ -59,10 +83,12 @@
 </template>
 
 <script>
-import { LMap, LTileLayer, LMarker,LTooltip, LPolyline,LControlLayers,LPopup,LCircleMarker} from "vue2-leaflet";
+import { LMap, LTileLayer, LMarker,LTooltip, LPolyline,LControlLayers,LPopup,LCircleMarker,LLayerGroup, LPolygon} from "vue2-leaflet";
 import { latLngBounds, latLng } from "leaflet";
 import { OpenStreetMapProvider } from 'leaflet-geosearch';
 import sensorsData from "../../sensors.json"
+import mapData from "../../densityMap.json"
+import cellsData from "../../cells.json"
 export default {
   name: "Map",
   components: {
@@ -73,7 +99,9 @@ export default {
     LPolyline,
     LCircleMarker,
     LControlLayers,
-    LPopup
+    LPopup,
+    LLayerGroup,
+    LPolygon
 
   },
   data() {
@@ -93,6 +121,8 @@ export default {
         }
       ],
       sensors:sensorsData.Sensors,
+      mapPoll: mapData.features,
+      cells: cellsData.cells,
       poll:'',
       square: {
         latlngs: [[-12.0605,-77.0566],[-12.0350,-77.0566],[-12.0350,-77.0026],[-12.0605,-77.0026],[-12.0605,-77.0566]],
