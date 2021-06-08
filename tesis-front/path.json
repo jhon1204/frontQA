@@ -1,0 +1,812 @@
+{
+    "hints": {
+        "visited_nodes.average": 1520.0,
+        "visited_nodes.sum": 1520
+    },
+    "info": {
+        "copyrights": [
+            "GraphHopper",
+            "OpenStreetMap contributors"
+        ],
+        "took": 8529
+    },
+    "paths": [
+        {
+            "ascend": 0.0,
+            "bbox": [
+                -77.039653,
+                -12.056975,
+                -77.019358,
+                -12.045213
+            ],
+            "descend": 0.0,
+            "details": {},
+            "distance": 7208.267,
+            "instructions": [
+                {
+                    "distance": 110.389,
+                    "heading": 174.64,
+                    "interval": [
+                        0,
+                        1
+                    ],
+                    "sign": 0,
+                    "street_name": "Avenida Garcilazo de la Vega",
+                    "text": "Continúa por Avenida Garcilazo de la Vega",
+                    "time": 79479
+                },
+                {
+                    "distance": 67.101,
+                    "interval": [
+                        1,
+                        2
+                    ],
+                    "sign": 2,
+                    "street_name": "Avenida Bolivia",
+                    "text": "Gira a la derecha por Avenida Bolivia",
+                    "time": 48312
+                },
+                {
+                    "distance": 191.931,
+                    "interval": [
+                        2,
+                        3
+                    ],
+                    "sign": 2,
+                    "street_name": "Pasaje Hernan Velarde",
+                    "text": "Gira a la derecha por Pasaje Hernan Velarde",
+                    "time": 138190
+                },
+                {
+                    "distance": 58.977,
+                    "interval": [
+                        3,
+                        4
+                    ],
+                    "sign": -2,
+                    "street_name": "Avenida Uruguay",
+                    "text": "Gira a la izquierda por Avenida Uruguay",
+                    "time": 42463
+                },
+                {
+                    "distance": 92.717,
+                    "interval": [
+                        4,
+                        5
+                    ],
+                    "sign": 2,
+                    "street_name": "Jirón Washington",
+                    "text": "Gira a la derecha por Jirón Washington",
+                    "time": 66756
+                },
+                {
+                    "distance": 126.08,
+                    "interval": [
+                        5,
+                        6
+                    ],
+                    "sign": 2,
+                    "street_name": "Pasaje Villarán",
+                    "text": "Gira a la derecha por Pasaje Villarán",
+                    "time": 90777
+                },
+                {
+                    "distance": 84.108,
+                    "interval": [
+                        6,
+                        7
+                    ],
+                    "sign": 2,
+                    "street_name": "Avenida Garcilazo de la Vega",
+                    "text": "Gira a la derecha por Avenida Garcilazo de la Vega",
+                    "time": 60557
+                },
+                {
+                    "distance": 8.124,
+                    "interval": [
+                        7,
+                        8
+                    ],
+                    "sign": -2,
+                    "street_name": "",
+                    "text": "Gira a la izquierda",
+                    "time": 5849
+                },
+                {
+                    "distance": 219.511,
+                    "interval": [
+                        8,
+                        10
+                    ],
+                    "sign": -2,
+                    "street_name": "Avenida Garcilazo de la Vega",
+                    "text": "Gira a la izquierda por Avenida Garcilazo de la Vega",
+                    "time": 158047
+                },
+                {
+                    "distance": 70.013,
+                    "interval": [
+                        10,
+                        11
+                    ],
+                    "sign": 2,
+                    "street_name": "Jirón Ilo",
+                    "text": "Gira a la derecha por Jirón Ilo",
+                    "time": 50409
+                },
+                {
+                    "distance": 111.994,
+                    "interval": [
+                        11,
+                        12
+                    ],
+                    "sign": 2,
+                    "street_name": "Jirón Rufino Torrico",
+                    "text": "Gira a la derecha por Jirón Rufino Torrico",
+                    "time": 80634
+                },
+                {
+                    "distance": 219.012,
+                    "interval": [
+                        12,
+                        13
+                    ],
+                    "sign": -3,
+                    "street_name": "Jirón Camaná",
+                    "text": "Gira fuerte a la izquierda por Jirón Camaná",
+                    "time": 157688
+                },
+                {
+                    "distance": 71.901,
+                    "interval": [
+                        13,
+                        14
+                    ],
+                    "sign": 0,
+                    "street_name": "Jirón Camaná",
+                    "text": "Continúa por Jirón Camaná",
+                    "time": 51768
+                },
+                {
+                    "distance": 101.718,
+                    "interval": [
+                        14,
+                        15
+                    ],
+                    "sign": 2,
+                    "street_name": "Avenida Nicolás de Pierola",
+                    "text": "Gira a la derecha por Avenida Nicolás de Pierola",
+                    "time": 73236
+                },
+                {
+                    "distance": 7.222,
+                    "interval": [
+                        15,
+                        16
+                    ],
+                    "sign": -2,
+                    "street_name": "",
+                    "text": "Gira a la izquierda",
+                    "time": 5199
+                },
+                {
+                    "distance": 106.221,
+                    "interval": [
+                        16,
+                        17
+                    ],
+                    "sign": -2,
+                    "street_name": "Avenida Nicolás de Pierola",
+                    "text": "Gira a la izquierda por Avenida Nicolás de Pierola",
+                    "time": 76479
+                },
+                {
+                    "distance": 191.251,
+                    "interval": [
+                        17,
+                        19
+                    ],
+                    "sign": 2,
+                    "street_name": "Jirón Camaná",
+                    "text": "Gira a la derecha por Jirón Camaná",
+                    "time": 137700
+                },
+                {
+                    "distance": 133.544,
+                    "interval": [
+                        19,
+                        20
+                    ],
+                    "sign": -2,
+                    "street_name": "Jirón Moquegua",
+                    "text": "Gira a la izquierda por Jirón Moquegua",
+                    "time": 96151
+                },
+                {
+                    "distance": 257.134,
+                    "interval": [
+                        20,
+                        21
+                    ],
+                    "sign": 2,
+                    "street_name": "Jirón Cailloma",
+                    "text": "Gira a la derecha por Jirón Cailloma",
+                    "time": 185136
+                },
+                {
+                    "distance": 386.926,
+                    "interval": [
+                        21,
+                        22
+                    ],
+                    "sign": 2,
+                    "street_name": "Jirón Huancavelica",
+                    "text": "Gira a la derecha por Jirón Huancavelica",
+                    "time": 278585
+                },
+                {
+                    "distance": 128.826,
+                    "interval": [
+                        22,
+                        23
+                    ],
+                    "sign": -2,
+                    "street_name": "Jirón Carabaya",
+                    "text": "Gira a la izquierda por Jirón Carabaya",
+                    "time": 92754
+                },
+                {
+                    "distance": 129.254,
+                    "interval": [
+                        23,
+                        24
+                    ],
+                    "sign": 2,
+                    "street_name": "Jirón Ucayali",
+                    "text": "Gira a la derecha por Jirón Ucayali",
+                    "time": 93062
+                },
+                {
+                    "distance": 129.633,
+                    "interval": [
+                        24,
+                        25
+                    ],
+                    "sign": -2,
+                    "street_name": "Jirón Lampa",
+                    "text": "Gira a la izquierda por Jirón Lampa",
+                    "time": 93335
+                },
+                {
+                    "distance": 127.486,
+                    "interval": [
+                        25,
+                        26
+                    ],
+                    "sign": 2,
+                    "street_name": "Jirón Huallaga",
+                    "text": "Gira a la derecha por Jirón Huallaga",
+                    "time": 91789
+                },
+                {
+                    "distance": 125.529,
+                    "interval": [
+                        26,
+                        27
+                    ],
+                    "sign": -2,
+                    "street_name": "Jirón Azángaro",
+                    "text": "Gira a la izquierda por Jirón Azángaro",
+                    "time": 90380
+                },
+                {
+                    "distance": 126.673,
+                    "interval": [
+                        27,
+                        29
+                    ],
+                    "sign": 2,
+                    "street_name": "Jirón Junín",
+                    "text": "Gira a la derecha por Jirón Junín",
+                    "time": 91204
+                },
+                {
+                    "distance": 21.144,
+                    "interval": [
+                        29,
+                        31
+                    ],
+                    "sign": -2,
+                    "street_name": "",
+                    "text": "Gira a la izquierda",
+                    "time": 15223
+                },
+                {
+                    "distance": 108.776,
+                    "interval": [
+                        31,
+                        32
+                    ],
+                    "sign": -2,
+                    "street_name": "Avenida Abancay",
+                    "text": "Gira a la izquierda por Avenida Abancay",
+                    "time": 78318
+                },
+                {
+                    "distance": 17.844,
+                    "interval": [
+                        32,
+                        33
+                    ],
+                    "sign": 2,
+                    "street_name": "",
+                    "text": "Gira a la derecha",
+                    "time": 12847
+                },
+                {
+                    "distance": 14.525,
+                    "interval": [
+                        33,
+                        34
+                    ],
+                    "sign": -2,
+                    "street_name": "Avenida Abancay",
+                    "text": "Gira a la izquierda por Avenida Abancay",
+                    "time": 10458
+                },
+                {
+                    "distance": 650.447,
+                    "interval": [
+                        34,
+                        38
+                    ],
+                    "sign": 2,
+                    "street_name": "Jirón Ancash",
+                    "text": "Gira a la derecha por Jirón Ancash",
+                    "time": 468318
+                },
+                {
+                    "distance": 310.986,
+                    "interval": [
+                        38,
+                        44
+                    ],
+                    "sign": -3,
+                    "street_name": "Jirón Huánuco",
+                    "text": "Gira fuerte a la izquierda por Jirón Huánuco",
+                    "time": 223909
+                },
+                {
+                    "distance": 6.665,
+                    "interval": [
+                        44,
+                        45
+                    ],
+                    "sign": 2,
+                    "street_name": "Jirón Amazonas",
+                    "text": "Gira a la derecha por Jirón Amazonas",
+                    "time": 4798
+                },
+                {
+                    "distance": 668.827,
+                    "interval": [
+                        45,
+                        51
+                    ],
+                    "sign": 3,
+                    "street_name": "Jirón Huánuco",
+                    "text": "Gira fuerte a la derecha por Jirón Huánuco",
+                    "time": 481555
+                },
+                {
+                    "distance": 230.432,
+                    "interval": [
+                        51,
+                        52
+                    ],
+                    "sign": 7,
+                    "street_name": "Jirón Lucanas",
+                    "text": "Mantente a la derecha por Jirón Lucanas",
+                    "time": 165911
+                },
+                {
+                    "distance": 604.03,
+                    "interval": [
+                        52,
+                        57
+                    ],
+                    "sign": 2,
+                    "street_name": "Jirón Antonio Miró Quezada",
+                    "text": "Gira a la derecha por Jirón Antonio Miró Quezada",
+                    "time": 434900
+                },
+                {
+                    "distance": 267.903,
+                    "interval": [
+                        57,
+                        58
+                    ],
+                    "sign": -2,
+                    "street_name": "Jirón Paruro",
+                    "text": "Gira a la izquierda por Jirón Paruro",
+                    "time": 192889
+                },
+                {
+                    "annotation_importance": 1,
+                    "annotation_text": "private road",
+                    "distance": 133.53,
+                    "interval": [
+                        58,
+                        59
+                    ],
+                    "sign": 2,
+                    "street_name": "Jirón Puno",
+                    "text": "Gira a la derecha por Jirón Puno",
+                    "time": 96141
+                },
+                {
+                    "distance": 84.447,
+                    "interval": [
+                        59,
+                        60
+                    ],
+                    "sign": -2,
+                    "street_name": "Jirón Andahuaylas",
+                    "text": "Gira a la izquierda por Jirón Andahuaylas",
+                    "time": 60801
+                },
+                {
+                    "distance": 143.801,
+                    "interval": [
+                        60,
+                        64
+                    ],
+                    "sign": -2,
+                    "street_name": "Jirón Andahuaylas",
+                    "text": "Gira a la izquierda por Jirón Andahuaylas",
+                    "time": 103536
+                },
+                {
+                    "distance": 255.127,
+                    "interval": [
+                        64,
+                        65
+                    ],
+                    "sign": 3,
+                    "street_name": "Avenida Nicolás de Pierola",
+                    "text": "Gira fuerte a la derecha por Avenida Nicolás de Pierola",
+                    "time": 183691
+                },
+                {
+                    "distance": 12.207,
+                    "interval": [
+                        65,
+                        66
+                    ],
+                    "sign": -3,
+                    "street_name": "",
+                    "text": "Gira fuerte a la izquierda",
+                    "time": 8789
+                },
+                {
+                    "distance": 294.3,
+                    "interval": [
+                        66,
+                        67
+                    ],
+                    "sign": -2,
+                    "street_name": "Avenida Nicolás de Pierola",
+                    "text": "Gira a la izquierda por Avenida Nicolás de Pierola",
+                    "time": 211895
+                },
+                {
+                    "distance": 0.0,
+                    "interval": [
+                        67,
+                        67
+                    ],
+                    "last_heading": 124.09119926943369,
+                    "sign": 4,
+                    "street_name": "",
+                    "text": "¡Fin del recorrido!",
+                    "time": 0
+                }
+            ],
+            "legs": [],
+            "points": {
+                "coordinates": [
+                    [
+                        -12.054887,
+                        -77.038354
+                    ],
+                    [
+                        -12.055875,
+                        -77.038258
+                    ],
+                    [
+                        -12.05593,
+                        -77.038872
+                    ],
+                    [
+                        -12.054212,
+                        -77.039038
+                    ],
+                    [
+                        -12.054261,
+                        -77.039578
+                    ],
+                    [
+                        -12.053431,
+                        -77.039653
+                    ],
+                    [
+                        -12.053303,
+                        -77.038501
+                    ],
+                    [
+                        -12.054057,
+                        -77.038431
+                    ],
+                    [
+                        -12.054051,
+                        -77.038356
+                    ],
+                    [
+                        -12.053282,
+                        -77.038416
+                    ],
+                    [
+                        -12.05209,
+                        -77.038583
+                    ],
+                    [
+                        -12.051991,
+                        -77.037947
+                    ],
+                    [
+                        -12.05294,
+                        -77.037603
+                    ],
+                    [
+                        -12.05132,
+                        -77.036458
+                    ],
+                    [
+                        -12.050774,
+                        -77.036104
+                    ],
+                    [
+                        -12.051241,
+                        -77.0353
+                    ],
+                    [
+                        -12.051187,
+                        -77.035263
+                    ],
+                    [
+                        -12.050657,
+                        -77.036076
+                    ],
+                    [
+                        -12.050552,
+                        -77.036041
+                    ],
+                    [
+                        -12.04923,
+                        -77.035102
+                    ],
+                    [
+                        -12.048609,
+                        -77.036153
+                    ],
+                    [
+                        -12.046746,
+                        -77.034752
+                    ],
+                    [
+                        -12.04862,
+                        -77.031754
+                    ],
+                    [
+                        -12.047664,
+                        -77.031085
+                    ],
+                    [
+                        -12.048301,
+                        -77.030091
+                    ],
+                    [
+                        -12.047343,
+                        -77.029412
+                    ],
+                    [
+                        -12.047958,
+                        -77.028423
+                    ],
+                    [
+                        -12.047036,
+                        -77.027757
+                    ],
+                    [
+                        -12.047534,
+                        -77.026979
+                    ],
+                    [
+                        -12.047649,
+                        -77.026776
+                    ],
+                    [
+                        -12.047535,
+                        -77.026718
+                    ],
+                    [
+                        -12.047562,
+                        -77.026661
+                    ],
+                    [
+                        -12.046691,
+                        -77.026206
+                    ],
+                    [
+                        -12.046764,
+                        -77.02606
+                    ],
+                    [
+                        -12.046648,
+                        -77.025997
+                    ],
+                    [
+                        -12.04763,
+                        -77.021755
+                    ],
+                    [
+                        -12.04792,
+                        -77.020353
+                    ],
+                    [
+                        -12.047914,
+                        -77.020258
+                    ],
+                    [
+                        -12.047886,
+                        -77.020168
+                    ],
+                    [
+                        -12.047818,
+                        -77.020224
+                    ],
+                    [
+                        -12.047748,
+                        -77.020255
+                    ],
+                    [
+                        -12.04724,
+                        -77.020226
+                    ],
+                    [
+                        -12.046741,
+                        -77.020157
+                    ],
+                    [
+                        -12.04555,
+                        -77.019695
+                    ],
+                    [
+                        -12.045215,
+                        -77.019605
+                    ],
+                    [
+                        -12.045213,
+                        -77.019544
+                    ],
+                    [
+                        -12.046702,
+                        -77.019934
+                    ],
+                    [
+                        -12.046936,
+                        -77.019964
+                    ],
+                    [
+                        -12.047255,
+                        -77.019914
+                    ],
+                    [
+                        -12.047694,
+                        -77.019786
+                    ],
+                    [
+                        -12.04786,
+                        -77.019754
+                    ],
+                    [
+                        -12.051131,
+                        -77.019358
+                    ],
+                    [
+                        -12.053178,
+                        -77.019686
+                    ],
+                    [
+                        -12.053172,
+                        -77.020059
+                    ],
+                    [
+                        -12.053015,
+                        -77.021593
+                    ],
+                    [
+                        -12.052763,
+                        -77.023036
+                    ],
+                    [
+                        -12.052575,
+                        -77.023957
+                    ],
+                    [
+                        -12.052451,
+                        -77.025183
+                    ],
+                    [
+                        -12.054822,
+                        -77.025622
+                    ],
+                    [
+                        -12.05468,
+                        -77.026841
+                    ],
+                    [
+                        -12.055438,
+                        -77.026894
+                    ],
+                    [
+                        -12.055502,
+                        -77.026787
+                    ],
+                    [
+                        -12.05554,
+                        -77.026758
+                    ],
+                    [
+                        -12.055587,
+                        -77.026751
+                    ],
+                    [
+                        -12.056659,
+                        -77.026816
+                    ],
+                    [
+                        -12.055412,
+                        -77.028785
+                    ],
+                    [
+                        -12.055521,
+                        -77.028775
+                    ],
+                    [
+                        -12.056975,
+                        -77.026513
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "points_encoded": false,
+            "snapped_waypoints": {
+                "coordinates": [
+                    [
+                        -77.038354,
+                        -12.054887
+                    ],
+                    [
+                        -77.026513,
+                        -12.056975
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "time": 5189918,
+            "transfers": 0,
+            "weight": 104952.477585
+        }
+    ]
+}

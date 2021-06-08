@@ -5,6 +5,11 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'leaflet/dist/leaflet.css';
 import { Icon } from "leaflet";
+import VueSelect from 'vue-select'
+import vSelect from 'vue-select'
+
+Vue.component('v-select', vSelect)
+Vue.component('v-select', VueSelect.VueSelect);
 
 delete Icon.Default.prototype._getIconUrl;
 
