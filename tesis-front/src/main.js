@@ -7,6 +7,7 @@ import 'leaflet/dist/leaflet.css';
 import { Icon } from "leaflet";
 import VueSelect from 'vue-select'
 import vSelect from 'vue-select'
+import vuetify from './plugins/vuetify'
 
 Vue.component('v-select', vSelect)
 Vue.component('v-select', VueSelect.VueSelect);
@@ -23,5 +24,6 @@ Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 new Vue({
-  render: h => h(App),
+  vuetify,
+  render: h => h(App)
 }).$mount('#app')
