@@ -15,11 +15,14 @@
     "element-ui": "^2.15.2",
     "leaflet": "^1.7.1",
     "leaflet-geosearch": "^3.3.2",
+    "mapbox-gl": "^2.3.0",
     "vue": "^2.6.12",
     "vue-choropleth": "^0.3.1",
+    "vue-mapbox": "^0.4.1",
     "vue-select": "^3.11.2",
     "vue2-leaflet": "^2.7.0",
-    "vue2-leaflet-geosearch": "^1.0.6"
+    "vue2-leaflet-geosearch": "^1.0.6",
+    "vuetify": "^2.5.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -27,8 +30,11 @@
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-component": "^1.1.1",
+    "deepmerge": "^4.2.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "sass": "^1.32.13",
+    "sass-loader": "^12.1.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

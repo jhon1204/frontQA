@@ -14,12 +14,12 @@
                     <b-list-group flush>
                       <b-list-group-item> Punto de inicio:
                         <strong>
-                          {{marker1.lat.toString()+', '+marker1.lng.toString()}}
+                          {{ marker1.lat? (marker1.lat +', '+ marker1.lng):(marker1[1]+','+marker1[0]) }}
                         </strong>
                       </b-list-group-item>
                       <b-list-group-item> Punto de inicio:
                         <strong>
-                            {{marker2.lat.toString()+', '+marker2.lng.toString()}}
+                            {{ marker2.lat? (marker2.lat +', '+ marker2.lng):(marker2[1]+','+marker2[0]) }}
                         </strong>
                       </b-list-group-item>
                     </b-list-group>
@@ -48,42 +48,12 @@
           </b-card>
         </b-col>
         <b-col id="mapContainer" >
-          <LMap  :zoom="zoom" :center="center" :bounds="bounds" :max-bounds="maxBounds" >
-            <LTileLayer :url="url"></LTileLayer>
-            <LPolyline :lat-lngs="square.latlngs" :color="square.color"></LPolyline>
-            <LPolyline :lat-lngs="path.points.coordinates" color="blue"></LPolyline>
-            <LMarker :lat-lng="marker1" :draggable="true" @dragend="updateMarker1"><LTooltip>Punto de Inicio</LTooltip></LMarker>
-            <LMarker :lat-lng="marker2" :draggable="true" @dragend="updateMarker2"><LTooltip>Punto de Fin</LTooltip></LMarker>
-            <LControlLayers
-              position="topright"
-              :collapsed="true"
-              :sort-layers="true"
-            />
-            
-            <LLayerGroup name="Sensores" layer-type="overlay">
-             <LCircleMarker
-                v-for="marker in sensors"
-                :key="marker.id"
-                :radius="circle.radius"
-                
-                :lat-lng="[marker.lat,marker.lon]"
-                :color="getColor(marker.pollutantValue)"
-              >
-                <LPopup >{{getContent(marker.id)}}</LPopup>
-             </LCircleMarker>
-            </LLayerGroup>
-            <LLayerGroup name="Mapa Contaminación" layer-type="overlay">
-              <LPolygon v-for="cell in mapPoll"
-                :key="cell.id"
-                :lat-lngs="cell.geometry.coordinates[0]"
-                :opacity="0.1"
-                :color="getColor(cell.properties.pollution)"
-              >
-
-              </LPolygon>
-                
-            </LLayerGroup>
-          </LMap>
+          <MglMap :accessToken="accessToken" :mapStyle="mapStyle" :center="center" :maxBounds="bounds" >
+            <MglMarker :coordinates="marker1" :draggable="true" @dragend="updateMarker1" >
+              
+            </MglMarker>
+            <MglMarker :coordinates="marker2" :draggable="true" @dragend="updateMarker2" ></MglMarker>
+          </MglMap>
           
         </b-col>
         
@@ -93,9 +63,10 @@
 </template>
 
 <script>
-import { LMap, LTileLayer, LMarker,LTooltip, LPolyline,LControlLayers,LPopup,LCircleMarker,LLayerGroup, LPolygon} from "vue2-leaflet";
-import { latLngBounds, latLng } from "leaflet";
-
+//import { LMap, LTileLayer, LMarker,LTooltip, LPolyline,LControlLayers,LPopup,LCircleMarker,LLayerGroup, LPolygon} from "vue2-leaflet";
+//import { latLngBounds, latLng } from "leaflet";
+import MapBox from "mapbox-gl";
+import {MglMap, MglMarker} from "vue-mapbox"
 import sensorsData from "../../sensors.json"
 import mapData from "../../densityMap.json"
 import cellsData from "../../cells.json"
@@ -105,7 +76,7 @@ import 'vue-select/dist/vue-select.css';
 export default {
   name: "Map",
   components: {
-    LMap,
+    /* LMap,
     LTileLayer,
     LMarker,
     LTooltip,
@@ -114,11 +85,18 @@ export default {
     LControlLayers,
     LPopup,
     LLayerGroup,
-    LPolygon
+    LPolygon */
+    MglMap,
+    MglMarker
 
+  },
+  created(){
+    this.mapbox=MapBox;
   },
   data() {
     return {
+      accessToken:'pk.eyJ1IjoiamhvbmJlbml0ZXMiLCJhIjoiY2twY3o2a25qMWF0cDJybGFxOW0ydXd5ZyJ9.tL58AV2mr3WkZyyQWaeMZw',
+      mapStyle:'mapbox://styles/mapbox/streets-v11',
       loading:true,
       iconSize: [32, 37],
       iconAnchor: [16, 37],
@@ -151,20 +129,20 @@ export default {
         
       ],
       zoom: 13,
-      center: [-12.0549,-77.0385],
-      bounds: latLngBounds([
+      center: [-77.0385,-12.0549],
+       bounds: [
+        [ -77.0566,-12.0605],
+        [ -77.0026,-12.0350]
+      ],
+      /*maxBounds: latLngBounds([
         [-12.0605, -77.0566],
         [-12.0350, -77.0026]
-      ]),
-      maxBounds: latLngBounds([
-        [-12.0605, -77.0566],
-        [-12.0350, -77.0026]
-      ]),
+      ]), */
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      marker1: latLng(-12.0549,-77.0385),
-      marker2:latLng(-12.0571,-77.0266),
+      marker1: [-77.0385,-12.0549],//latLng(-12.0549,-77.0385),
+      marker2:[-77.0266,-12.0571]//latLng(-12.0571,-77.0266),
 
 
     };
@@ -172,6 +150,9 @@ export default {
   methods: {
     print(){
       console.log(this.poll);
+    },
+    print2(event){
+      console.log(event)
     },
     getColor(value){
       let i=0
@@ -306,10 +287,10 @@ export default {
     },
 
     updateMarker1(event){
-      this.marker1=event.target._latlng
+      this.marker1=[event.marker._lngLat.lng,event.marker._lngLat.lat]
     },
     updateMarker2(event){
-      this.marker2=event.target._latlng
+      this.marker2=[event.marker._lngLat.lng,event.marker._lngLat.lat]
     },
     addMarker(event){
       this.markers.push(event.latLng)
