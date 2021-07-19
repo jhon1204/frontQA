@@ -6,7 +6,7 @@
                 <h2 class="bar1">PUCP</h2>
             </b-col>
             <b-col class="topbar">
-                <b-button @click="modalShow=!modalShow" variant="primary" class="button1">Información</b-button>
+                <b-button @click="modalShow=!modalShow" variant="primary" class="button1">¿Cómo usar?</b-button>
 
                 <b-modal v-model="modalShow" title="Información" hide-footer>
                     <h1>Proyecto de Tesis</h1>

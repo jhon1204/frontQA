@@ -5,11 +5,11 @@
       
       <b-row >
         <b-col md="4">
-          <b v-if="time">Usando datos de :{{this.time.substring(4,this.time.length)}}</b>
+          <b v-if="time">Usando datos de :{{this.time}}</b>
           <b-card>
               
               <br/>
-              <v-combobox v-model="poll" :items="pollutants" label="text" @input="updateValues"/>          
+              <v-combobox v-model="poll" :items="pollutants" label="Seleccionar Contaminante" @input="updateValues"/>          
                   
                     <b-list-group flush>
                       <b-list-group-item> Punto de inicio:
@@ -86,7 +86,7 @@
             </MglMarker>
             <MglGeojsonLayer type="fill" :source="mapPoll" sourceId="mapPoll" layerId="pollution-layer" :layer="pollutionLayer"></MglGeojsonLayer>
             
-            <MglGeojsonLayer type="line" :source="path" sourceId="path" layerId="line-layer" :layer="lineLayer"></MglGeojsonLayer>
+            <MglGeojsonLayer v-if="updated" type="line" :source="path" sourceId="path" layerId="line-layer" :layer="lineLayer"></MglGeojsonLayer>
 
           </MglMap>
           
@@ -147,7 +147,7 @@ export default {
       },
       instructions:pathData.paths[0].instructions,  
       path:{data:{type:'FeatureCollection',features:[{geometry:pathData.paths[0].points, type:"Feature"}]}}, 
-      time:'',
+      time:null,
       
       sensors:sensorsData.sensors,
       mapPoll: {data:mapData},
@@ -343,13 +343,13 @@ export default {
           
         }
         this.mapPoll={data:response.data}
-        this.time=response.data.timestamp
+        this.time=new Date(response.data.timestamp)
         
       } else {
         console.log('getting cells',this.poll)
         axios.get(`http://qaira-data.online:8080/densityMap?pollutant=${this.poll}`).then( (response) =>{
           this.mapPoll={data:response.data}
-          this.time=response.data.timestamp 
+          this.time=new Date(response.data.timestamp) 
 
         });
         
